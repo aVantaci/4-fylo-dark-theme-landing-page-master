@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(#1c2431 420px, #181f2a 420px);
+}
+
+body * {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+}
+
+img.logo {
+  width: 90px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+nav {
+  text-align: right;
+  margin: 22px 25px;
+}
+
+nav a {
+  text-decoration: none;
+  opacity: 70%;
+  font-size: 12px;
+}
+
+nav a:nth-of-type(2) {
+  padding: 0 20px;
+}
+
+div.content {
+  text-align: center;
+  width: 80%;
+  margin: auto;
+}
+
+header img.intro {
+  width: 100%;
+  margin: 30px 0;
+}
+
+header img.background {
+  position: absolute;
+  top: 280px;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+header h1 {
+  font-size: 22px;
+  line-height: 34px;
+}
+
+header p {
+  padding: 20px 0;
+  opacity: 80%;
+}
+
+header button {
+  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
+  background: linear-gradient(90deg, #65e2d9, #339ecc);
+  border: none;
+  padding: 15px 0px;
+  width: 250px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 700;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=style.css.map */

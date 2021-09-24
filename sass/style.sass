@@ -1,0 +1,57 @@
+@import '_variables'
+@mixin button
+    background: linear-gradient(90deg,$colorCyan, $colorBlue)
+    border: none
+    padding: 15px 0px
+    width: 250px
+    border-radius: 30px
+    cursor: pointer
+    font-weight: $fontWeight2
+    margin: 10px 0
+
+*
+    padding: 0
+    margin: 0
+body
+    background: linear-gradient($colorDarkBlue1 420px, $colorDarkBlue2 420px)
+    *
+        color: $colorWhite
+        font-family: 'Open Sans', sans-serif
+        font-size: $fontSizeBody
+img.logo
+    width: 90px
+    position: absolute
+    top: 20px
+    left: 20px
+nav
+    text-align: right
+    margin: 22px 25px
+    a
+        text-decoration: none
+        opacity: 70%
+        font-size: 12px
+        &:nth-of-type(2)
+            padding: 0 20px
+div.content
+    text-align: center
+    width: 80%
+    margin: auto
+header
+    img
+        &.intro
+            width: 100%
+            margin: 30px 0
+        &.background
+            position: absolute
+            top: 280px
+            left: 0
+            z-index: -1
+            width: 100%
+    h1
+        font-size: 22px
+        line-height: 34px
+    p
+        padding: 20px 0
+        opacity: 80%
+    button
+        @include button
