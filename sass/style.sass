@@ -1,4 +1,4 @@
-@import '_variables'
+@import '_variables.sass'
 @mixin button
     background: linear-gradient(90deg,$colorCyan, $colorBlue)
     border: none
@@ -6,7 +6,7 @@
     width: 250px
     border-radius: 30px
     cursor: pointer
-    font-weight: $fontWeight2
+    font-weight: 700
     margin: 10px 0
 
 *
@@ -31,7 +31,7 @@ nav
         opacity: 70%
         font-size: 12px
         &:nth-of-type(2)
-            padding: 0 20px
+            margin: 0 20px
 div.content
     text-align: center
     width: 80%
@@ -51,7 +51,27 @@ header
         font-size: 22px
         line-height: 34px
     p
-        padding: 20px 0
-        opacity: 80%
+        margin: 20px 0
+        opacity: 70%
     button
         @include button
+main
+    div.feauters
+        display: flex
+        flex-wrap: wrap
+        margin: 130px 0
+        gap: 100px
+        div
+            flex: 1 1 230px
+            &.two
+                img
+                    height: 70px
+                    width: auto
+            img
+                width: 70px
+            h4
+                font-size: 18px
+                font-family: 'Raleway', sans-serif
+                margin: 30px 0 10px
+            p
+                opacity: 70%
