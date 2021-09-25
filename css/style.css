@@ -14,6 +14,11 @@ body * {
   font-size: 14px;
 }
 
+p, a {
+  opacity: 70%;
+  text-decoration: none;
+}
+
 img.logo {
   width: 90px;
   position: absolute;
@@ -27,8 +32,6 @@ nav {
 }
 
 nav a {
-  text-decoration: none;
-  opacity: 70%;
   font-size: 12px;
 }
 
@@ -38,7 +41,7 @@ nav a:nth-of-type(2) {
 
 div.content {
   text-align: center;
-  width: 80%;
+  width: 85%;
   margin: auto;
 }
 
@@ -62,7 +65,6 @@ header h1 {
 
 header p {
   margin: 20px 0;
-  opacity: 70%;
 }
 
 header button {
@@ -77,7 +79,7 @@ header button {
   margin: 10px 0;
 }
 
-main div.feauters {
+main section.feauters {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,28 +89,111 @@ main div.feauters {
   gap: 100px;
 }
 
-main div.feauters div {
+main section.feauters div {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 230px;
           flex: 1 1 230px;
 }
 
-main div.feauters div.two img {
+main section.feauters div.two img {
   height: 70px;
   width: auto;
 }
 
-main div.feauters div img {
+main section.feauters div img {
   width: 70px;
 }
 
-main div.feauters div h4 {
+main section.feauters div h4 {
   font-size: 18px;
   font-family: 'Raleway', sans-serif;
   margin: 30px 0 10px;
 }
 
-main div.feauters div p {
-  opacity: 70%;
+main section.howWorks {
+  text-align: left;
+}
+
+main section.howWorks img {
+  width: 100%;
+  margin: 40px 0;
+}
+
+main section.howWorks h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+main section.howWorks p {
+  margin: 20px 0;
+}
+
+main section.howWorks a {
+  color: #65e2d9;
+  font-size: 13px;
+  border-bottom: 1px solid;
+  padding-bottom: 4px;
+  width: 145px;
+}
+
+main section.howWorks a img {
+  width: 16px;
+  margin: auto;
+  vertical-align: -4px;
+}
+
+main section.team {
+  margin: 200px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 25px;
+  width: 85%;
+}
+
+main section.team > div {
+  background-color: #202a3c;
+  border-radius: 5px;
+  text-align: left;
+  position: relative;
+  padding: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 250px;
+          flex: 1 1 250px;
+}
+
+main section.team > div * {
+  font-size: 12px;
+}
+
+main section.team > div.one > img {
+  width: 25px;
+  position: absolute;
+  top: -20px;
+  left: 5px;
+  z-index: -1;
+}
+
+main section.team > div > p {
+  line-height: 20px;
+  padding-bottom: 25px;
+}
+
+main section.team > div div {
+  letter-spacing: 1px;
+}
+
+main section.team > div div img {
+  border-radius: 50%;
+  width: 30px;
+  float: left;
+  margin-right: 10px;
+}
+
+main section.team > div div p {
+  font-size: 9px;
+  margin-top: 2px;
 }
 /*# sourceMappingURL=style.css.map */
