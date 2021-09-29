@@ -1,0 +1,62 @@
+*
+    padding: 0
+    margin: 0
+body
+    background: linear-gradient($colorDarkBlue1 420px, $colorDarkBlue2 420px)
+    max-width: 1920px
+    margin: 0 auto
+    position: relative
+    *
+        color: $colorWhite
+        font-family: 'Open Sans', sans-serif
+        font-size: $fontSizeBody
+    h1, h2, h3, h4,
+        font-family: 'Raleway', sans-serif
+        font-size: 18px
+    a, p
+        opacity: 80%
+        text-decoration: none
+        transition: .3s
+    a
+        &:hover
+            opacity: 100%
+img.logo
+    position: absolute
+    width: 90px
+    top: 0
+    left: 20px
+nav
+    margin: 20px
+    ul
+        text-align: right
+        li
+            display: inline-block
+            &:nth-of-type(2)
+                margin: 0 20px
+            a
+                font-size: 12px
+                &:hover
+                    text-decoration: underline
+@include aHover
+div.content
+    text-align: center
+    width: 85%
+    margin: auto
+
+@media only screen and (min-width: 1440px)
+    body
+        background: linear-gradient($colorDarkBlue1 1340px, $colorDarkBlue2 1340px)
+    img.logo
+        width: 175px
+        top: -15px
+        left: 63px
+    nav
+        margin: 90px 80px
+        ul
+            li
+                &:nth-of-type(2)
+                    margin: 0 53px
+                a
+                    font-size: 16px
+    div.content
+        width: 87%

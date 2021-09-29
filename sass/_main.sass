@@ -1,0 +1,175 @@
+main
+    section.feauters
+        display: flex
+        flex-wrap: wrap
+        margin: 130px auto
+        gap: 80px
+        max-width: 1000px
+        div
+            flex: 1 1 300px
+            img
+                width: 70px
+            h4
+                margin: 30px 0 10px
+                font-size: 18px
+            p
+                max-width: 350px
+                margin: auto
+        div.two
+            img
+                height: 70px
+                width: auto
+            h4
+                margin: 20px 0 10px
+    section.howWorks
+        text-align: left
+        display: flex
+        flex-wrap: wrap
+        flex: 1 1 1000px
+        gap: 35px
+        justify-content: center
+        img
+            width: 100%
+            max-width: 610px
+            margin: 35px 0 0
+        div.wrapper
+            max-width: 600px
+            h2
+                font-size: 18px
+            p
+                margin: 20px 0
+            a
+                color: $colorCyan
+                font-size: 12px
+                border-bottom: 1px solid
+                padding-bottom: 4px
+                width: 145px
+                transition: .3s
+                &:hover
+                    color: $colorWhite
+                img
+                    width: 16px
+                    margin: auto
+                    vertical-align: -4px
+    section.team
+        margin: 160px auto -15px
+        display: flex
+        flex-wrap: wrap
+        gap: 25px
+        width: 85%
+        justify-content: center
+        >div
+            background-color: $colorDarkBlue4
+            border-radius: 5px
+            text-align: left
+            position: relative
+            padding: 20px
+            flex: 1 1 250px
+            max-width: 320px
+            *
+                font-size: 10px
+            &.one>img
+                position: absolute
+                top: -17px
+                left: 5px
+                width: 20px
+                z-index: -1
+            >p
+                line-height: 18px
+                padding-bottom: 20px
+            div
+                letter-spacing: 1px
+                *
+                    font-size: 9px
+                img
+                    border-radius: 50%
+                    width: 26px
+                    float: left
+                    margin-right: 10px
+                p
+                    margin-top: 2px
+                    font-size: 8px
+    section.earlyAccess
+        background: $colorDarkBlue1
+        border-radius: 10px
+        transform: translateY(175px)
+        padding: 40px 0 35px
+        max-width: 800px
+        margin: auto
+        *
+            margin: auto
+        h3
+            padding: 0 0 20px
+        p
+            width: 90%
+            max-width: 650px
+            line-height: 20px
+        div.wrapper2
+            display: flex
+            flex-wrap: wrap
+            flex: 1 1 300px
+            input
+                @include input
+                color: black
+                font-size: 10px
+                padding-left: 30px
+                margin: 30px auto 23px
+                &::placeholder
+                    opacity: 70%
+            button
+                @include button
+
+@media only screen and (min-width: 1024px)
+    main
+        section.earlyAccess
+            padding: 40px 0 15px
+            div.wrapper2
+                input
+                    font-size: 12px
+                    text-align: left
+                    margin-left: 60px
+                button
+                    margin-right: 60px
+                    max-width: 200px
+
+@media only screen and (min-width: 1440px)
+    main
+        section.feauters
+            width: 80%
+            div
+                img
+                    width: 85px
+                h4
+                    font-size: 20px
+                p
+                    width: 80%
+            div.two
+                img
+                    height: 85px
+        section.howWorks
+            align-items: center
+            gap: 55px
+            div.wrapper
+                width: 45%
+                align-self: center
+                h2
+                    font-size: 40px
+                    max-width: 400px
+                a, p
+                    font-size: 16px
+        section.team
+            gap: 40px
+            width: 95%
+            >div
+                padding: 40px 25px 30px
+                *
+                    font-size: 14px
+                &.one>img
+                    top: -35px
+                    left: -10px
+                    width: 55px
+                >p
+                    line-height: 22px
+        section.earlyAccess
+            h3
+                font-size: 30px

@@ -1,0 +1,95 @@
+footer
+    background: $colorDarkBlue3
+    padding: 175px 7.5% 40px
+    img.logo2
+        padding: 70px 0 40px
+    div.content2
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        gap: 50px 20px
+        div.info
+            display: flex
+            flex-wrap: wrap
+            gap: 20px
+            flex-grow: 1
+            justify-content: space-between
+            max-width: 490px
+            div
+                position: relative
+                img
+                    position: absolute
+                    top: 6px
+                p
+                    padding-left: 40px
+            div.one
+                p
+                    max-width: 280px
+                    width: 100%
+                    line-height: 24px
+                    font-size: 16px
+            div.two
+                img
+                    top: 2px
+                p
+                    padding-bottom: 20px
+        div.links
+            display: flex
+            flex-wrap: wrap
+            width: 100%
+            max-width: 320px
+            gap: 20px 0px
+            ul
+                width: 100%
+                max-width: 160px
+                li
+                    margin: 0 0 20px
+                    a
+                        font-size: 16px
+            @include aHover
+        div.socials
+            text-align: center
+            width: 100%
+            i
+                border: 1px solid
+                border-radius: 50%
+                width: 24px
+                height: 24px
+                margin: 0 5px
+                box-sizing: border-box
+                padding: 5px
+                font-size: 12px
+                transition: .3s
+                &:hover
+                    color: $colorCyan
+
+@media only screen and (min-width: 1024px)
+    footer
+        div.content2
+            justify-content: space-between
+            div.socials
+                max-width: 120px
+            div.links
+                transform: translateX(40px)
+
+@media only screen and (min-width: 1440px)
+    footer
+        *
+            font-size: 16px
+        div.content2
+            div.info
+                max-width: 620px
+                div.one
+                    p
+                        max-width: 350px
+                div.two
+                    p
+                        font-size: 14px
+            div.links
+                transform: translateX(80px)
+            div.socials
+                i
+                    width: 30px
+                    height: 30px
+                    padding: 6px
+                    font-size: 16px

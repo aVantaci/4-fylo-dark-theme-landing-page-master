@@ -1,0 +1,33 @@
+@mixin input
+    border: none
+    outline: none
+    width: 85%
+    padding: 15px 0px
+    border-radius: 30px
+    box-sizing: border-box
+    max-width: 450px
+@mixin button
+    @include input
+    background: linear-gradient(90deg,$colorCyan, $colorBlue)
+    cursor: pointer
+    font-weight: 700
+    &:hover
+        background: linear-gradient(90deg, hsl(176, 68%, 74%), hsl(198, 60%, 60%))
+@mixin aHover
+    ul
+        list-style: none
+        li
+            font-size: 0
+            a
+                font-family: raleway
+                display: inline-block
+                text-align: center
+                &::before
+                    display: block
+                    content: attr(title)
+                    font-weight: bold
+                    height: 0
+                    overflow: hidden
+                    visibility: hidden
+                &:hover
+                    font-weight: bold

@@ -6,6 +6,9 @@
 
 body {
   background: linear-gradient(#1c2431 420px, #181f2a 420px);
+  max-width: 1920px;
+  margin: 0 auto;
+  position: relative;
 }
 
 body * {
@@ -14,37 +17,78 @@ body * {
   font-size: 14px;
 }
 
-body h1, body h2 {
+body h1, body h2, body h3, body h4 {
   font-family: 'Raleway', sans-serif;
-}
-
-body h2 {
   font-size: 18px;
 }
 
-body p, body a {
-  opacity: 70%;
+body a, body p {
+  opacity: 80%;
   text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+body a:hover {
+  opacity: 100%;
 }
 
 img.logo {
-  width: 90px;
   position: absolute;
-  top: 20px;
+  width: 90px;
+  top: 0;
   left: 20px;
 }
 
 nav {
-  text-align: right;
-  margin: 22px 25px;
+  margin: 20px;
 }
 
-nav a {
+nav ul {
+  text-align: right;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li:nth-of-type(2) {
+  margin: 0 20px;
+}
+
+nav ul li a {
   font-size: 12px;
 }
 
-nav a:nth-of-type(2) {
-  margin: 0 20px;
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  font-size: 0;
+}
+
+ul li a {
+  font-family: raleway;
+  display: inline-block;
+  text-align: center;
+}
+
+ul li a::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+ul li a:hover {
+  font-weight: bold;
 }
 
 div.content {
@@ -53,9 +97,36 @@ div.content {
   margin: auto;
 }
 
-header img.intro {
+@media only screen and (min-width: 1440px) {
+  body {
+    background: linear-gradient(#1c2431 1340px, #181f2a 1340px);
+  }
+  img.logo {
+    width: 175px;
+    top: -15px;
+    left: 63px;
+  }
+  nav {
+    margin: 90px 80px;
+  }
+  nav ul li:nth-of-type(2) {
+    margin: 0 53px;
+  }
+  nav ul li a {
+    font-size: 16px;
+  }
+  div.content {
+    width: 87%;
+  }
+}
+
+header img {
   width: 100%;
+}
+
+header img.intro {
   margin: 30px 0;
+  max-width: 800px;
 }
 
 header img.background {
@@ -63,23 +134,22 @@ header img.background {
   top: 280px;
   left: 0;
   z-index: -1;
-  width: 100%;
 }
 
 header h1 {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 34px;
+  max-width: 743px;
+  margin: auto;
 }
 
 header p {
-  margin: 20px 0 30px;
+  margin: 20px auto 30px;
+  line-height: 22px;
+  max-width: 630px;
 }
 
 header button {
-  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
-  background: linear-gradient(90deg, #65e2d9, #339ecc);
-  cursor: pointer;
-  font-weight: 700;
   border: none;
   outline: none;
   width: 85%;
@@ -87,7 +157,44 @@ header button {
   border-radius: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-width: 450px;
+  background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
+  background: linear-gradient(90deg, #65e2d9, #339ecc);
+  cursor: pointer;
+  font-weight: 700;
   width: 250px;
+}
+
+header button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#90eae4), to(#5cb1d6));
+  background: linear-gradient(90deg, #90eae4, #5cb1d6);
+}
+
+@media only screen and (min-width: 1440px) {
+  header {
+    width: 60%;
+    margin: auto;
+  }
+  header img.intro {
+    margin: 0 0 30px;
+  }
+  header img.background {
+    top: 810px;
+  }
+  header h1 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  header p {
+    font-size: 20px;
+    width: 85%;
+    margin: 30px auto;
+    line-height: 28px;
+  }
+  header button {
+    width: 280px;
+    padding: 20px 0;
+  }
 }
 
 main section.feauters {
@@ -96,14 +203,29 @@ main section.feauters {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 130px 0;
-  gap: 100px;
+  margin: 130px auto;
+  gap: 80px;
+  max-width: 1000px;
 }
 
 main section.feauters div {
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 230px;
-          flex: 1 1 230px;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+}
+
+main section.feauters div img {
+  width: 70px;
+}
+
+main section.feauters div h4 {
+  margin: 30px 0 10px;
+  font-size: 18px;
+}
+
+main section.feauters div p {
+  max-width: 350px;
+  margin: auto;
 }
 
 main section.feauters div.two img {
@@ -111,41 +233,59 @@ main section.feauters div.two img {
   width: auto;
 }
 
-main section.feauters div img {
-  width: 70px;
-}
-
-main section.feauters div h2 {
-  font-size: 18px;
-  margin: 30px 0 10px;
+main section.feauters div.two h4 {
+  margin: 20px 0 10px;
 }
 
 main section.howWorks {
   text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 1000px;
+          flex: 1 1 1000px;
+  gap: 35px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main section.howWorks img {
   width: 100%;
-  margin: 35px 0;
+  max-width: 610px;
+  margin: 35px 0 0;
 }
 
-main section.howWorks h2 {
+main section.howWorks div.wrapper {
+  max-width: 600px;
+}
+
+main section.howWorks div.wrapper h2 {
   font-size: 18px;
 }
 
-main section.howWorks p {
+main section.howWorks div.wrapper p {
   margin: 20px 0;
 }
 
-main section.howWorks a {
+main section.howWorks div.wrapper a {
   color: #65e2d9;
   font-size: 12px;
   border-bottom: 1px solid;
   padding-bottom: 4px;
   width: 145px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-main section.howWorks a img {
+main section.howWorks div.wrapper a:hover {
+  color: white;
+}
+
+main section.howWorks div.wrapper a img {
   width: 16px;
   margin: auto;
   vertical-align: -4px;
@@ -160,6 +300,9 @@ main section.team {
       flex-wrap: wrap;
   gap: 25px;
   width: 85%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main section.team > div {
@@ -171,6 +314,7 @@ main section.team > div {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 250px;
           flex: 1 1 250px;
+  max-width: 320px;
 }
 
 main section.team > div * {
@@ -178,10 +322,10 @@ main section.team > div * {
 }
 
 main section.team > div.one > img {
-  width: 20px;
   position: absolute;
   top: -17px;
   left: 5px;
+  width: 20px;
   z-index: -1;
 }
 
@@ -212,26 +356,40 @@ main section.team > div div p {
 
 main section.earlyAccess {
   background: #1c2431;
-  border-radius: 5px;
+  border-radius: 10px;
   -webkit-transform: translateY(175px);
           transform: translateY(175px);
+  padding: 40px 0 35px;
+  max-width: 800px;
+  margin: auto;
 }
 
 main section.earlyAccess * {
   margin: auto;
 }
 
-main section.earlyAccess h2 {
-  font-size: 18px;
-  padding: 30px 0 20px;
+main section.earlyAccess h3 {
+  padding: 0 0 20px;
 }
 
 main section.earlyAccess p {
   width: 90%;
+  max-width: 650px;
   line-height: 20px;
 }
 
-main section.earlyAccess input {
+main section.earlyAccess div.wrapper2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 300px;
+          flex: 1 1 300px;
+}
+
+main section.earlyAccess div.wrapper2 input {
   border: none;
   outline: none;
   width: 85%;
@@ -239,41 +397,120 @@ main section.earlyAccess input {
   border-radius: 30px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-width: 450px;
   color: black;
   font-size: 10px;
   padding-left: 30px;
-  margin: 30px 0 23px;
+  margin: 30px auto 23px;
 }
 
-main section.earlyAccess input::-webkit-input-placeholder {
+main section.earlyAccess div.wrapper2 input::-webkit-input-placeholder {
   opacity: 70%;
 }
 
-main section.earlyAccess input:-ms-input-placeholder {
+main section.earlyAccess div.wrapper2 input:-ms-input-placeholder {
   opacity: 70%;
 }
 
-main section.earlyAccess input::-ms-input-placeholder {
+main section.earlyAccess div.wrapper2 input::-ms-input-placeholder {
   opacity: 70%;
 }
 
-main section.earlyAccess input::placeholder {
+main section.earlyAccess div.wrapper2 input::placeholder {
   opacity: 70%;
 }
 
-main section.earlyAccess button {
+main section.earlyAccess div.wrapper2 button {
+  border: none;
+  outline: none;
+  width: 85%;
+  padding: 15px 0px;
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 450px;
   background: -webkit-gradient(linear, left top, right top, from(#65e2d9), to(#339ecc));
   background: linear-gradient(90deg, #65e2d9, #339ecc);
   cursor: pointer;
   font-weight: 700;
-  border: none;
-  outline: none;
-  width: 85%;
-  padding: 15px 0px;
-  border-radius: 30px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-bottom: 35px;
+}
+
+main section.earlyAccess div.wrapper2 button:hover {
+  background: -webkit-gradient(linear, left top, right top, from(#90eae4), to(#5cb1d6));
+  background: linear-gradient(90deg, #90eae4, #5cb1d6);
+}
+
+@media only screen and (min-width: 1024px) {
+  main section.earlyAccess {
+    padding: 40px 0 15px;
+  }
+  main section.earlyAccess div.wrapper2 input {
+    font-size: 12px;
+    text-align: left;
+    margin-left: 60px;
+  }
+  main section.earlyAccess div.wrapper2 button {
+    margin-right: 60px;
+    max-width: 200px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  main section.feauters {
+    width: 80%;
+  }
+  main section.feauters div img {
+    width: 85px;
+  }
+  main section.feauters div h4 {
+    font-size: 20px;
+  }
+  main section.feauters div p {
+    width: 80%;
+  }
+  main section.feauters div.two img {
+    height: 85px;
+  }
+  main section.howWorks {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 55px;
+  }
+  main section.howWorks div.wrapper {
+    width: 45%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  main section.howWorks div.wrapper h2 {
+    font-size: 40px;
+    max-width: 400px;
+  }
+  main section.howWorks div.wrapper a, main section.howWorks div.wrapper p {
+    font-size: 16px;
+  }
+  main section.team {
+    gap: 40px;
+    width: 95%;
+  }
+  main section.team > div {
+    padding: 40px 25px 30px;
+  }
+  main section.team > div * {
+    font-size: 14px;
+  }
+  main section.team > div.one > img {
+    top: -35px;
+    left: -10px;
+    width: 55px;
+  }
+  main section.team > div > p {
+    line-height: 22px;
+  }
+  main section.earlyAccess h3 {
+    font-size: 30px;
+  }
 }
 
 footer {
@@ -281,8 +518,8 @@ footer {
   padding: 175px 7.5% 40px;
 }
 
-footer img {
-  padding: 70px 10px 40px;
+footer img.logo2 {
+  padding: 70px 0 40px;
 }
 
 footer div.content2 {
@@ -291,26 +528,110 @@ footer div.content2 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 50px 20px;
 }
 
-footer div.content2 > * {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 300px;
-          flex: 1 1 300px;
-}
-
-footer div.content2 div.two p:last-of-type {
-  margin: 20px 0 30px;
-}
-
-footer div.content2 div.socials {
+footer div.content2 div.info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 490px;
+}
+
+footer div.content2 div.info div {
+  position: relative;
+}
+
+footer div.content2 div.info div img {
+  position: absolute;
+  top: 6px;
+}
+
+footer div.content2 div.info div p {
+  padding-left: 40px;
+}
+
+footer div.content2 div.info div.one p {
+  max-width: 280px;
+  width: 100%;
+  line-height: 24px;
+  font-size: 16px;
+}
+
+footer div.content2 div.info div.two img {
+  top: 2px;
+}
+
+footer div.content2 div.info div.two p {
+  padding-bottom: 20px;
+}
+
+footer div.content2 div.links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  max-width: 320px;
+  gap: 20px 0px;
+}
+
+footer div.content2 div.links ul {
+  width: 100%;
+  max-width: 160px;
+}
+
+footer div.content2 div.links ul li {
+  margin: 0 0 20px;
+}
+
+footer div.content2 div.links ul li a {
+  font-size: 16px;
+}
+
+footer div.content2 div.links ul {
+  list-style: none;
+}
+
+footer div.content2 div.links ul li {
+  font-size: 0;
+}
+
+footer div.content2 div.links ul li a {
+  font-family: raleway;
+  display: inline-block;
+  text-align: center;
+}
+
+footer div.content2 div.links ul li a::before {
+  display: block;
+  content: attr(title);
+  font-weight: bold;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+footer div.content2 div.links ul li a:hover {
+  font-weight: bold;
+}
+
+footer div.content2 div.socials {
+  text-align: center;
+  width: 100%;
 }
 
 footer div.content2 div.socials i {
@@ -318,30 +639,56 @@ footer div.content2 div.socials i {
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  text-align: center;
   margin: 0 5px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 5px;
   font-size: 12px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-footer div.content2 div p {
-  position: relative;
-  -webkit-transform: translateX(40px);
-          transform: translateX(40px);
-  max-width: 280px;
-  font-size: 14px;
+footer div.content2 div.socials i:hover {
+  color: #65e2d9;
 }
 
-footer div.content2 div p i {
-  left: -30px;
-  top: 5px;
-  position: absolute;
+@media only screen and (min-width: 1024px) {
+  footer div.content2 {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer div.content2 div.socials {
+    max-width: 120px;
+  }
+  footer div.content2 div.links {
+    -webkit-transform: translateX(40px);
+            transform: translateX(40px);
+  }
 }
 
-footer div.content2 ul li {
-  list-style: none;
-  margin: 20px 0;
+@media only screen and (min-width: 1440px) {
+  footer * {
+    font-size: 16px;
+  }
+  footer div.content2 div.info {
+    max-width: 620px;
+  }
+  footer div.content2 div.info div.one p {
+    max-width: 350px;
+  }
+  footer div.content2 div.info div.two p {
+    font-size: 14px;
+  }
+  footer div.content2 div.links {
+    -webkit-transform: translateX(80px);
+            transform: translateX(80px);
+  }
+  footer div.content2 div.socials i {
+    width: 30px;
+    height: 30px;
+    padding: 6px;
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
