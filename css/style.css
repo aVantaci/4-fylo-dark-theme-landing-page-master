@@ -4,8 +4,11 @@
   margin: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background: linear-gradient(#1c2431 420px, #181f2a 420px);
   max-width: 1920px;
   margin: 0 auto;
   position: relative;
@@ -98,9 +101,6 @@ div.content {
 }
 
 @media only screen and (min-width: 1440px) {
-  body {
-    background: linear-gradient(#1c2431 1340px, #181f2a 1340px);
-  }
   img.logo {
     width: 175px;
     top: -15px;
@@ -203,7 +203,8 @@ main section.feauters {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 130px auto;
+  margin: 0 auto;
+  padding: 130px 0;
   gap: 80px;
   max-width: 1000px;
 }
@@ -292,7 +293,8 @@ main section.howWorks div.wrapper a img {
 }
 
 main section.team {
-  margin: 160px auto -15px;
+  margin: 0 auto -15px;
+  padding-top: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -359,7 +361,7 @@ main section.earlyAccess {
   border-radius: 10px;
   -webkit-transform: translateY(175px);
           transform: translateY(175px);
-  padding: 40px 0 35px;
+  padding: 40px 0 0;
   max-width: 800px;
   margin: auto;
 }
@@ -440,18 +442,29 @@ main section.earlyAccess div.wrapper2 button:hover {
   background: linear-gradient(90deg, #90eae4, #5cb1d6);
 }
 
+main section.earlyAccess div.wrapper2 p.alert {
+  font-weight: 700;
+  font-size: 12px;
+  height: 35px;
+  line-height: 35px;
+  color: #1c2431;
+}
+
 @media only screen and (min-width: 1024px) {
-  main section.earlyAccess {
-    padding: 40px 0 15px;
-  }
   main section.earlyAccess div.wrapper2 input {
     font-size: 12px;
     text-align: left;
     margin-left: 60px;
+    margin-bottom: 0px;
   }
   main section.earlyAccess div.wrapper2 button {
     margin-right: 60px;
+    margin-bottom: 0px;
     max-width: 200px;
+  }
+  main section.earlyAccess div.wrapper2 p.alert {
+    padding-left: 30px;
+    text-align: left;
   }
 }
 
@@ -632,6 +645,10 @@ footer div.content2 div.links ul li a:hover {
 footer div.content2 div.socials {
   text-align: center;
   width: 100%;
+}
+
+footer div.content2 div.socials a:hover {
+  opacity: 80%;
 }
 
 footer div.content2 div.socials i {

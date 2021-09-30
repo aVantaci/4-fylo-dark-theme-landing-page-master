@@ -2,7 +2,8 @@ main
     section.feauters
         display: flex
         flex-wrap: wrap
-        margin: 130px auto
+        margin: 0 auto
+        padding: 130px 0
         gap: 80px
         max-width: 1000px
         div
@@ -52,7 +53,8 @@ main
                     margin: auto
                     vertical-align: -4px
     section.team
-        margin: 160px auto -15px
+        margin: 0 auto -15px
+        padding-top: 160px
         display: flex
         flex-wrap: wrap
         gap: 25px
@@ -93,7 +95,7 @@ main
         background: $colorDarkBlue1
         border-radius: 10px
         transform: translateY(175px)
-        padding: 40px 0 35px
+        padding: 40px 0 0
         max-width: 800px
         margin: auto
         *
@@ -118,19 +120,29 @@ main
                     opacity: 70%
             button
                 @include button
+            p.alert
+                font-weight: 700
+                font-size: 12px
+                height: 35px
+                line-height: 35px
+                color: $colorDarkBlue1
 
 @media only screen and (min-width: 1024px)
     main
         section.earlyAccess
-            padding: 40px 0 15px
             div.wrapper2
                 input
                     font-size: 12px
                     text-align: left
                     margin-left: 60px
+                    margin-bottom: 0px
                 button
                     margin-right: 60px
+                    margin-bottom: 0px
                     max-width: 200px
+                p.alert
+                    padding-left: 30px
+                    text-align: left
 
 @media only screen and (min-width: 1440px)
     main
