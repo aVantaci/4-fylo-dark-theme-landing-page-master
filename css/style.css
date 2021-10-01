@@ -162,12 +162,26 @@ header button {
   background: linear-gradient(90deg, #65e2d9, #339ecc);
   cursor: pointer;
   font-weight: 700;
+  position: relative;
+  overflow: hidden;
   width: 250px;
 }
 
-header button:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#90eae4), to(#5cb1d6));
-  background: linear-gradient(90deg, #90eae4, #5cb1d6);
+header button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+header button:hover::before {
+  opacity: 30%;
 }
 
 @media only screen and (min-width: 1440px) {
@@ -435,11 +449,25 @@ main section.earlyAccess div.wrapper2 button {
   background: linear-gradient(90deg, #65e2d9, #339ecc);
   cursor: pointer;
   font-weight: 700;
+  position: relative;
+  overflow: hidden;
 }
 
-main section.earlyAccess div.wrapper2 button:hover {
-  background: -webkit-gradient(linear, left top, right top, from(#90eae4), to(#5cb1d6));
-  background: linear-gradient(90deg, #90eae4, #5cb1d6);
+main section.earlyAccess div.wrapper2 button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main section.earlyAccess div.wrapper2 button:hover::before {
+  opacity: 30%;
 }
 
 main section.earlyAccess div.wrapper2 p.alert {

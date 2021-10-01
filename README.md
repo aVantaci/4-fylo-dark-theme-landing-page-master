@@ -34,6 +34,7 @@ Users should be able to:
 - Solution URL: [Email validation](https://www.w3resource.com/javascript/form/email-validation.php)
 - Solution URL: [Background resizing](https://www.tutorialrepublic.com/faq/how-to-get-current-image-size-in-javascript.php)
 - Solution URL: [Background resizing](https://plainjs.com/javascript/styles/get-the-position-of-an-element-relative-to-the-document-24/)
+- Solution URL: [Button hover](https://github.com/Tiago138/fylo-dark-theme-landing-page/blob/main/scss/_globals.scss)
 
 ## My process
 
