@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshots
 
-![](./screenshotm.jpg)
+![](./screenshotm.png)
 
 ![](./screenshotd.jpg)
 
